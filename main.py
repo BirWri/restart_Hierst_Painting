@@ -1,4 +1,5 @@
 import colorgram
+from turtle import Turtle, Screen
 
 
 def extract_colors_from_image():
@@ -18,8 +19,25 @@ def colors_to_rgb_format(colors):
         list_of_colors.append(new_color)
     return list_of_colors
 
+# Extract colors from chosen image (Doesnt need to be ran every time)
+#colors = extract_colors_from_image()
+#rgb = colors_to_rgb_format(colors)
 
-colors = extract_colors_from_image()
-rgb = colors_to_rgb_format(colors)
-print(rgb)
+image_color_list =[(178, 159, 17), (23, 56, 24), (123, 116, 14), (249, 213, 52), (41, 92, 17), (245, 169, 28), (70, 102, 10), (253, 239, 192), (240, 75, 31), (58, 118, 18
+)]
+
+# Configure screen and set the correct screen size. The requirements are 10 dots of 20 with 50 in between
+canvas_size = (10*20) + (9*50)
+print(canvas_size)
+screen = Screen()
+screen.screensize(canvas_size, canvas_size)
+screen.exitonclick()
+
+# Configure Painter and add it to correct position
+painter = Turtle()
+painter.shape("arrow")
+
+# Create Turtle move function
+
+
 
