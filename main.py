@@ -48,6 +48,7 @@ painter.sety(-315)
 painter.showturtle()
 painter.pendown()
 t.colormode(255)
+painter.hideturtle()
 
 
 # Create Turtle move function
@@ -67,12 +68,10 @@ def draw_filled_circle():
 
 # Go to new row
 def new_row():
-    painter.hideturtle()
     painter.penup()
     painter.sety(painter.ycor()+70)
     painter.setx(-315)
     painter.pendown()
-    painter.showturtle()
 
 
 #dot_counter = 0
