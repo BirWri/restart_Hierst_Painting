@@ -61,8 +61,8 @@ def move_painter():
 def draw_filled_circle():
     image_color_list = [(178, 159, 17), (23, 56, 24), (123, 116, 14), (249, 213, 52), (41, 92, 17), (245, 169, 28),
                         (70, 102, 10), (253, 239, 192), (240, 75, 31), (58, 118, 18)]
-    color = (image_color_list[random.randint(0, 9)])
-    painter.dot(20, color)
+
+    painter.dot(20, random.choice(image_color_list))
 
 
 # Go to new row
@@ -75,8 +75,8 @@ def new_row():
     painter.showturtle()
 
 
-dot_counter = 0
-for _ in range(100):
+#dot_counter = 0
+for dot_counter in range(100):
 
     if dot_counter % 10 == 0:
         new_row()
