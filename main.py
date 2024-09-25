@@ -31,11 +31,22 @@ canvas_size = (10*20) + (9*50)
 print(canvas_size)
 screen = Screen()
 screen.screensize(canvas_size, canvas_size)
-screen.exitonclick()
+
 
 # Configure Painter and add it to correct position
 painter = Turtle()
+painter.hideturtle()
+painter.penup()
 painter.shape("arrow")
+painter.color("black")
+painter.setx(-315)
+painter.sety(-315)
+painter.showturtle()
+painter.pendown()
+
+# Canvas only closed when user clicks on it
+screen.exitonclick()
+
 
 # Create Turtle move function
 
